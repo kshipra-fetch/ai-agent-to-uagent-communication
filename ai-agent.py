@@ -66,7 +66,7 @@ def init_client():
         raise
 
 
-@app.route('/api/send-data', methods=['POST'])
+@app.route('/request', methods=['POST'])
 def send_data():
     """Send payload to the selected agent based on provided address."""
     global agent_response
@@ -76,7 +76,7 @@ def send_data():
         # Parse the request payload
         data = request.json
         payload = data.get('payload')  # Extract the payload dictionary
-        target_address = "agent1qgyqf7l0djgvnd37f4fwvrv8xu7he2eatht328u05uy3vc9j33p7qe2dxtr"
+        target_address = "agent1qgyqf7l0djgvnd37f4fwvrv8xu7he2eatht328u05uy3vc9j33p7qe2dxtr" #run the uagent.py copy the address and paste here
         model_digest = Model.build_schema_digest(Request)
 
         # Send the payload to the specified agent
