@@ -76,13 +76,14 @@ def send_data():
         # Parse the request payload
         data = request.json
         payload = data.get('payload')  # Extract the payload dictionary
-        target_address = "agent1qgyqf7l0djgvnd37f4fwvrv8xu7he2eatht328u05uy3vc9j33p7qe2dxtr" #run the uagent.py copy the address and paste here
+
+        uagent_address = "agent1qgyqf7l0djgvnd37f4fwvrv8xu7he2eatht328u05uy3vc9j33p7qe2dxtr" #run the uagent.py copy the address and paste here
         model_digest = Model.build_schema_digest(Request)
 
         # Send the payload to the specified agent
         send_message_to_agent(
             client_identity,  # Frontend client identity
-            target_address,  # Agent address where we have to send the data
+            uagent_address,  # Agent address where we have to send the data
             payload,  # Payload containing the data
             model_digest=model_digest
         )
