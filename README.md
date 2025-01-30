@@ -31,8 +31,8 @@ Example payload for `/request`:
 ```
 
 ### uAgent Behavior
--Listens for incoming messages and logs them using the `@agent.on_message` handler.
--Sends a response message back to the Fetch.ai AI Agent using `await ctx.send()`.
+- Listens for incoming messages and logs them using the `@agent.on_message` handler.
+- Sends a response message back to the Fetch.ai AI Agent using `await ctx.send()`.
 
 ### Request Data Model
 
